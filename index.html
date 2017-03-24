@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Vi har benyttet title og icon for å sette inn tittel og fanebildet -->
+	<title> MaskedPictures </title>
+	<link rel="icon" href="pics/teat.png"><!--pro012-->
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+	<style type="text/css">
+		.fyll { /*Bakgrunnsbilde varierer fra side til side, og legges derfor inn direkte i html-doc*/
+			background-image: url("pics/stella.jpg");
+		}/*skj006*/
+	</style>
+	<script type="text/javascript" src="scripts/buttons.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, intial-scale=1">
+</head>
+
+
+<body onload="load_example();">
+	<div class="container">
+		<div class="fyll">
+			<div class="header">
+				<div id="upperHead">
+					<div class="mainbar"><!--pro012-->
+                   
+                        
+						<ul>
+							<li> <a href="index.html"> Hjemme </a></li>
+							<li> <a href="filmer.html"> Filmer </a></li>
+							<li> <a href="#"> Forum </a></li>
+
+						</ul>
+					</div><!--.mainbar-->
+
+	<!-- Skjemaet gir mulighet for å søke etter film tittel. Dere må inkludere muligheten for et mer avansert søk -->
+	<form id="search" action="search_results.html" method="get">
+		<fieldset>
+		
+			<div>
+				
+				<input id="film_title" name="film_title" type="text" placeholder="Search" >
+			</div>
+		</fieldset>
+		<input type="submit" id="submit_search" value="Søk">
+	</form>
+	
+
+  
+	
+	</form>
+
+					<div class="menyKnapp"><!--pro012-->
+						<ul>
+							<li class="meny" id="kaphe"> <a href="#"> Kaphekoff </a> 
+								<div class="dropned">
+									<a href="#"> Mine lån </a>
+									<a href="#"> Min ønskeliste </a>
+									<a href="#" title="Trykk her for å logge inn/ut" id="loggUtInn" onclick="loggUtInn();return false">Logg ut</a><!--skj006-->
+								</div>
+							</li>
+						</ul>
+					</div><!--.menyKnapp-->
+					<div class="mobilMeny"><!--skj006-->
+						<a href="#" id="menyIkon" onclick="sprettMeny();return false"><img src="pics/taxes-menu-icon.png" alt="menu button"></a>
+					</div><!--.mobilMeny-->
+				</div><!--#upperHead--><!--skj006-->
+				<div id="mobildrop">
+					<ul><!--skj006-->
+						<li> <a href="index.html"> Hjemme </a></li>
+						<li> <a href="filmer.html"> Filmer </a></li>
+						<li> <a href="#"> Forum </a></li>
+					</ul>
+				</div>
+			</div><!--.header-->
+			<div class="logo"><!--pro012-->
+				<img id="teat" src="pics/teat.svg" alt="Logo">
+                                <p>Masked Pictures</p>
+			</div>
+            
+            
+
+			<div id="allContent"><!--pro012-->
+                     <!--Header som holder seg på bunnen av siden. Når du hoverer over knappene spretter de nye boksene opp-->
+				<ul id="filmList">
+
+					<li class="meny"> <a href="#">Anbefalinger</a>
+						<div class="dropOpp">
+							<div class="miniContent">
+								<img class="miniPicture" src="pics/theint.jpg" alt="Intouchables">
+								<p class="miniText">
+
+									<a href="theint.html">The Intouchables (2011) </a>
+
+
+								</p>
+							</div>	<!--miniContent-->
+						</div>
+					</li>
+
+					<li class="meny"> <a href="#">Sist lånte</a>
+						<div class="dropOpp">
+							<div class="miniContent">
+								<img class="miniPicture" src="pics/lb2.jpg" alt="Lunchbox">
+								<p class="miniText">
+
+									<a href="Lunchbox.html">The Lunchbox (2013) </a>
+
+
+								</p>
+							</div>	<!--miniContent-->
+
+
+
+							<div class="miniContent">
+								<img class="miniPicture" src="pics/theint.jpg" alt="Intouchables">
+								<p class="miniText">
+
+									<a href="theint.html">The Intouchables (2011) </a>
+
+
+								</p>
+							</div>	<!--miniContent-->
+						</div>
+					</li>
+
+					<li class="meny"> <a href="#">Sist tilgjengeliggjorte</a>
+						<div class="dropOpp">
+							<div class="miniContent">
+								<img class="miniPicture" src="pics/mi_1.jpg" alt="Mission Impossible">
+								<p class="miniText">
+
+									<a href="MI.html">Mission:Impossible (1996) </a>
+
+
+								</p>
+							</div>	<!--miniContent-->
+						</div>
+					</li>
+
+					<li class="meny"> <a href="#">Rutiner for lån</a><!--pro012-->
+						<div id="rutineDrop">
+							<div id="rutineContent">
+								<div id="rutineText">
+									<p> Rutiner <br><br>
+										1. Følgende kan låne: staben ved Institutt for informasjons- og medievitenskap, studenter ved instituttet, på grunnlag av faglig begrunnelse, andre ved UIB etter særlig avtale for et avgrenset tidsrom eller for et avgrenset prosjekt.
+										<br><br>
+										2. Bestillnger vil bli effektuert hver arbeidsdag mellom klokken 14:00 og 15:00.
+										<br><br>
+										3. Ansatte ved instituttet får filmen lagt i posthyllen, studenter og andre får tilbakemelding om hvor og når filmen kan hentes.
+										<br><br>
+										4. For alt utlån gjelder en generell regel om lånetid på 1 uke, som kan forlenges med ytterlige en uke. Ønskes en film lånt over en lengre periode må dette begrunnes, og hver enkelt forespørsel vil bli vurdert.
+										<br><br>
+										5. Film skal leveres tilbake i posthyllen merket retur av film
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul><!--#filmList-->
+			</div><!--#allContent-->
+		</div><!--.fyll--><!--skj006-->
+	</div><!--.container--><!--skj006-->
+</body>
+</html>

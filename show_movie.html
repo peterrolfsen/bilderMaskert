@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8"/>
+  <head>
+    <script type="text/javascript" src="script/object.js"></script>
+    <script type="text/javascript" src="script/genres.js"></script>
+    <script type="text/javascript" src="script/reviews.js"></script>
+    <script type="text/javascript" src="script/query_params.js"></script>
+    <script type="text/javascript" src="script/show_movie.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+      
+  <title> MaskedPictures </title>
+  <link rel="icon" href="pics/teat.png"><!--pro012-->
+  <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+  <meta charset="utf-8">
+  </head>
+  <body>
+
+    <div class="header">
+        <div id="upperHead">
+          <div class="mainbar"><!--pro012-->
+                   
+                        
+            <ul>
+              <li> <a href="index.html"> Hjemme </a></li>
+              <li> <a href="filmer.html"> Filmer </a></li>
+              <li> <a href="#"> Forum </a></li>
+
+            </ul>
+          </div><!--.mainbar-->
+
+  <!-- Skjemaet gir mulighet for å søke etter film tittel. Dere må inkludere muligheten for et mer avansert søk -->
+  <form id="search" action="search_results.html" method="get">
+    <fieldset>
+    
+      <div>
+        
+        <input id="film_title" name="film_title" type="text" placeholder="Search" >
+      </div>
+    </fieldset>
+    <input type="submit" id="submit_search" value="Søk">
+  </form>
+  
+
+  
+  
+  </form>
+
+          <div class="menyKnapp"><!--pro012-->
+            <ul>
+              <li class="meny" id="kaphe"> <a href="#"> Kaphekoff </a> 
+                <div class="dropned">
+                  <a href="#"> Mine lån </a>
+                  <a href="#"> Min ønskeliste </a>
+                  <a href="#" title="Trykk her for å logge inn/ut" id="loggUtInn" onclick="loggUtInn();return false">Logg ut</a><!--skj006-->
+                </div>
+              </li>
+            </ul>
+          </div><!--.menyKnapp-->
+          <div class="mobilMeny"><!--skj006-->
+            <a href="#" id="menyIkon" onclick="sprettMeny();return false"><img src="pics/taxes-menu-icon.png" alt="menu button"></a>
+          </div><!--.mobilMeny-->
+        </div><!--#upperHead--><!--skj006-->
+        <div id="mobildrop">
+          <ul><!--skj006-->
+            <li> <a href="index.html"> Hjemme </a></li>
+            <li> <a href="filmer.html"> Filmer </a></li>
+            <li> <a href="#"> Forum </a></li>
+          </ul>
+        </div>
+      </div><!--.header-->
+  <div id="movieCover">
+  </div>
+    <h2 id="otitle"></h2>
+	<!-- Alt under er en enkelt formatert tabell som viser all informasjon som er tilgjengelig om denne filmen -->
+    <hr>
+    <div id="pictureMovie">
+    <img id="imageName" src="">
+
+    </div>
+       <div id="youtube">
+    
+    </div>
+
+    <table id="movie_stat_table" border=1>
+
+      <tr>
+		<td align="center"><b>Key</b></td><td align="center"><b>Value</b></td>
+      </tr>
+    </table>
+    
+    <table id="genre_stat_table" border="1">
+      <caption>Table: Stats from "object_genre"</caption>
+      <tr>
+		<td align="center"><b>Key</b></td><td align="center"><b>Value</b></td>
+      </tr>
+    </table>
+
+
+
+
+    <table id="review_stat_table" border=1>
+      <caption>Table: Stats from "reivew"</caption>
+      <tr>
+		<td align="center"><b>Key</b></td><td align="center"><b>Value</b></td>
+      </tr>
+    </table>
+
+   
+  </body>
+</html>
