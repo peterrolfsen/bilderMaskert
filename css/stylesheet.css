@@ -160,7 +160,9 @@ fieldset input[type=text]:focus {
     color: white;
     background-color: black;
     opacity: 0.7;
+
 }
+
 
 .menyKnapp {/*Pro012*/
 	margin-right: 2rem;
@@ -320,8 +322,10 @@ Her slutter fyll-elementer------------------------------------------------------
 }
 
 .meny a{/*Pro012*/
+	font-style: "Bebas Kai";
 	text-decoration: none;
 	color: white;
+
 }
 
 .dropOpp {/*Pro012*//*eva028*/
