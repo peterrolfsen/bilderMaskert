@@ -721,20 +721,52 @@ Her slutter fyll-elementer------------------------------------------------------
 	font-family: "Bebas Kai";
 	font-size: 6vh;
 }
+#movieName{
+    height: 60vh;
+    max-height:60vh;
+    max-width: auto;
+}
+
 
       #otitle{
            text-align: center;
+            font-size: 6vh;
+       }
+        #eTitle{
+           text-align: center;
+            
+       }
+        #nTitle{
+           text-align: center;
+            
        }
        #genre_stat_table{
-           display: none;
+        
+           font-size: 4vh;
+           margin-left: 45%;
+           text-transform: capitalize;
        }
        #youtube{
-    
+        text-align: center;
+           background-color: black;
+           
+           
 
        }
+#movie_stat_table{
+    width: 160vh;
+    margin-top: -60vh;
+    float: right;
+    border: none;
+     font-size: 4vh;
+    
+}
+
+
        #review_stat_table{
        	display: none;
        }
+
 
 @media screen and (max-width:1600px){/*Pro012*/
     #filmList{/*Pro012*/

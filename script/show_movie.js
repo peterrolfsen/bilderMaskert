@@ -6,14 +6,14 @@ function panic(message) {
 
 /*Funksjon for å hjelpe oss å finne bilder*/
    function findImage(id){
-            if(id < 1000){
-               return "<img src=\"https://imdb.uib.no/o/0/" + id +".jpg\">";
-            }else if(id > 1000 && id < 2000){
-                return "<img src=\"https://imdb.uib.no/o/1/" + id +".jpg\">";
-            }else if(id > 2000 && id < 3000){
-                return "<img src=\"https://imdb.uib.no/o/2/" + id +".jpg\">";
-            }else if(id > 3000 && id < 4000){
-                return "<img src=\"https://imdb.uib.no/o/3/" + id +".jpg\">";
+            if (id < 1000){
+               return "<img id=\"movieName\" src=\"https://imdb.uib.no/o/0/" + id +".jpg\">";
+            }else if (id > 1000 && id < 2000){
+                return "<img id=\"movieName\" src=\"https://imdb.uib.no/o/1/" + id +".jpg\">";
+            }else if (id > 2000 && id < 3000){
+                return "<img id=\"movieName\" src=\"https://imdb.uib.no/o/2/" + id +".jpg\">";
+            }else if (id > 3000 && id < 4000){
+                return "<img id=\"movieName\" src=\"https://imdb.uib.no/o/3/" + id +".jpg\">";
             }
         }
 function add_row(table, left, right) {
@@ -58,7 +58,20 @@ window.onload = function() {
     // title_element.appendChild(document.createTextNode(movie_object["otitle"]));    
     title_element.innerHTML = movie_object["otitle"] + " (" + movie_object["year"] + ")";
 
-
+    
+     var length = movie_object["length"];
+    document.getElementById("lengthM").innerHTML = "Lengde: " + length + ".min";
+    
+     var description = movie_object["description"];
+    document.getElementById("mDesc").innerHTML = description;
+    
+    var etitle = movie_object["etitle"];
+    var ntitle = movie_object["ntitle"];
+    if (ntitle){
+    document.getElementById("nTitle").innerHTML = "(" + ntitle + ")";
+    }else if(etitle){
+    document.getElementById("eTitle").innerHTML = "(" + etitle + ")";  
+    }
     
     // add a "debug-table" on the bottom showing all elements from movie_object
     stats_table = document.getElementById("movie_stat_table");
@@ -71,7 +84,7 @@ window.onload = function() {
     // add a "debug-table" on the bottom showing all genre info
     genre_table = document.getElementById("genre_stat_table");
     for (var i in genre_object) {
-		left = document.createTextNode(i);
+		left = document.createTextNode(" ");
 		right = document.createTextNode(genre_object[i]);
 		add_row(genre_table, left, right);
     }
