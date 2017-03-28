@@ -8,7 +8,12 @@
     <script type="text/javascript" src="script/query_params.js"></script>
     <script type="text/javascript" src="script/show_movie.js"></script>
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-      
+	<style type="text/css">
+		.showfyll { /*Bakgrunnsbilde varierer fra side til side, og legges derfor inn direkte i html-doc*/
+			background-image: url("pics/dv.jpg");
+		
+		}
+	</style>
   <title> MaskedPictures </title>
   <link rel="icon" href="pics/teat.png"><!--pro012-->
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
@@ -74,14 +79,13 @@
       <div id="youtube">
     
     </div>
-    
+    <div class="showfyll">
  <h2 id="otitle"></h2>
    <h3 id="eTitle"></h3> 
     <h3 id="nTitle"></h3> 
     
 	<!-- Alt under er en enkelt formatert tabell som viser all informasjon som er tilgjengelig om denne filmen -->
-    <div id="genre_stat_table" border="1">		
-    </div>
+    
     <hr>
      
     <div id="pictureMovie">
@@ -90,6 +94,8 @@
     </div>
      <div id="filmInfo">
          <div id="director"></div>
+         <br>
+         <div id="genre_stat_table" border="1">	</div>
          <br>
          <div id="folk"></div>
          <br>
@@ -117,7 +123,7 @@
 		<td align="center"><b>Key</b></td><td align="center"><b>Value</b></td>
       </tr>
     </table>
-
+</div>
    
   </body>
 </html>

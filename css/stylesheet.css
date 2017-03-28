@@ -1,4 +1,5 @@
 body, html {/*skj006*/
+
 	background: -webkit-repeating-linear-gradient(#cccccc,#dddddd,#eeeeee,#dddddd,#cccccc);
 	background: -webkit-repeating-linear-gradient(#cccccc,#dddddd,#cccccc);
 	background: repeating-linear-gradient(#cccccc,#dddddd,#cccccc);
@@ -23,15 +24,40 @@ body, html {/*skj006*/
 }
 
 
-.fyll { /*Pakker inn alt som skal vises før man blar nedover på siden*//*skj006*/
+	
+.fyll { /*Pakker inn alt som skal vises før man blar nedover på siden*/
+
+		
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	height: 100vh;
+	width: auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 auto;
+	flex: 0 0 auto;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: top;
+	-ms-flex-pack: top;
+	justify-content: top;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.showfyll { /*Pakker inn alt som skal vises før man blar nedover på siden*/
+
 	
+	background-size: cover;
+	background-repeat: no-repeat;
 
 	height: 100vh;
 	width: auto;
-
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -728,6 +754,8 @@ Her slutter fyll-elementer------------------------------------------------------
 #movieName{
     height: 60vh;
     max-height:60vh;
+	margin-left: -100vh;
+
     max-width: auto;
 }
 
@@ -742,12 +770,11 @@ Her slutter fyll-elementer------------------------------------------------------
        }
         #nTitle{
            text-align: center;
-            
+            margin-top: -10vh;
+			
        }
        #genre_stat_table{
-        
-           font-size: 4vh;
-           margin-left: 45%;
+    
            text-transform: capitalize;
        }
        #youtube{
@@ -776,9 +803,10 @@ Her slutter fyll-elementer------------------------------------------------------
  }      
         
 #filmInfo{
-    margin-left: 50vh;
+	width: 100vh; ;
     margin-top: -60vh;
-    font-size: 4vh;
+    font-size: 3vh;
+	color: white;
 }
 
 

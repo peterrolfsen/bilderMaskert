@@ -60,23 +60,23 @@ window.onload = function() {
 
     /*Henter ut lengde på filmen*/
      var length = movie_object["length"];
-    document.getElementById("lengthM").innerHTML = "Lengde: " + length + ".min";
+    document.getElementById("lengthM").innerHTML = "<STRONG>Lengde: </STRONG>" + length + ".min";
     
     /*Henter ut beskrivelse av filmen*/
      var description = movie_object["description"];
-    document.getElementById("mDesc").innerHTML = "Description: " + description;
+    document.getElementById("mDesc").innerHTML = "<STRONG>Description: </STRONG>" + description;
     
     /*Henter ut hvilken land filmen er fra*/
     var country = movie_object["country"];
-    document.getElementById("country").innerHTML = "Country: " + country;
+    document.getElementById("country").innerHTML = "<STRONG>Country: </STRONG>" + country;
     
     /*Henter ut regissøren av filmen*/
      var director = movie_object["dir"];
-    document.getElementById("director").innerHTML = "Director: " + director;
+    document.getElementById("director").innerHTML = "<STRONG>Director: </STRONG>" + director;
     
     /*Henter ut skuespillerne i filmen*/
      var folk = movie_object["folk"];
-    document.getElementById("folk").innerHTML = "Stars: " + folk;
+    document.getElementById("folk").innerHTML = "<STRONG>Stars: </STRONG>" + folk;
     
     /*Henter ut norsk tittel om det finnes, om ikke så gir den oss engelsk tittel, orginal tittel vises over uansett*/
     var etitle = movie_object["etitle"];
@@ -98,7 +98,7 @@ window.onload = function() {
     // add a "debug-table" on the bottom showing all genre info
     genre_table = document.getElementById("genre_stat_table");
     for (var i in genre_object) {
-		left = document.createTextNode(" ");
+		left = document.createTextNode("Genre: ");
 		right = document.createTextNode(genre_object[i]);
 		add_row(genre_table, left, right);
     }
