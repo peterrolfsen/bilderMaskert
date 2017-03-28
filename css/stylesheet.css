@@ -264,6 +264,7 @@ Her slutter fyll-elementer------------------------------------------------------
 */
 
 #allContent {
+	font-style: "Bebas Kai";
 
     /*skj006*/
 	/*
@@ -300,6 +301,7 @@ Her slutter fyll-elementer------------------------------------------------------
 	font-size: 20px;
 	font-weight: 600;
 	font-family: "Bebas Kai";
+	font-variant-caps: small-caps;
 	list-style-type: none;/*skj006*/
 	min-height: 50px;
 	width: 90%;
@@ -770,7 +772,10 @@ Her slutter fyll-elementer------------------------------------------------------
        #review_stat_table{
        	display: none;
        }
-
+#film_title {
+ 	list-style-type: none;
+ 	background: maroon;
+ }      
 
 @media screen and (max-width:1600px){/*Pro012*/
     #filmList{/*Pro012*/
@@ -952,4 +957,5 @@ Her slutter fyll-elementer------------------------------------------------------
 }
 
        /**Show movies**/
+
        
