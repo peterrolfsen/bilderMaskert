@@ -769,12 +769,11 @@ Her slutter fyll-elementer------------------------------------------------------
        #review_stat_table{
        	display: none;
        }
-<<<<<<< HEAD
+
 #film_title {
  	list-style-type: none;
  	background: maroon;
  }      
-=======
         
 #filmInfo{
     margin-left: 50vh;
@@ -783,7 +782,7 @@ Her slutter fyll-elementer------------------------------------------------------
 }
 
 
->>>>>>> origin/master
+
 
 @media screen and (max-width:1600px){/*Pro012*/
     #filmList{/*Pro012*/
