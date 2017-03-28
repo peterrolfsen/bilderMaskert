@@ -123,9 +123,7 @@ body, html {/*skj006*/
 }
 
 .mainbar li:hover {/*Pro012*/
-	font-size: 22px;
-	-webkit-transition-duration: 0.05s;
-	transition-duration: 0.05s;
+
 }
 
 fieldset {/*eva028*/
@@ -753,16 +751,15 @@ Her slutter fyll-elementer------------------------------------------------------
        #youtube{
         text-align: center;
            background-color: black;
+           width: 100%;
+           height: auto;
            
            
 
        }
 #movie_stat_table{
-    width: 160vh;
-    margin-top: -60vh;
-    float: right;
-    border: none;
-     font-size: 4vh;
+  display:none;
+    
     
 }
 
@@ -770,6 +767,13 @@ Her slutter fyll-elementer------------------------------------------------------
        #review_stat_table{
        	display: none;
        }
+        
+#filmInfo{
+    margin-left: 50vh;
+    margin-top: -60vh;
+    font-size: 4vh;
+}
+
 
 
 @media screen and (max-width:1600px){/*Pro012*/

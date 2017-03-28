@@ -4,7 +4,7 @@ function panic(message) {
 }
 
 
-/*Funksjon for å hjelpe oss å finne bilder*/
+/*Funksjon for å hjelpe oss å finne bilder, og hvor de ligger*/
    function findImage(id){
             if (id < 1000){
                return "<img id=\"movieName\" src=\"https://imdb.uib.no/o/0/" + id +".jpg\">";
@@ -58,13 +58,27 @@ window.onload = function() {
     // title_element.appendChild(document.createTextNode(movie_object["otitle"]));    
     title_element.innerHTML = movie_object["otitle"] + " (" + movie_object["year"] + ")";
 
-    
+    /*Henter ut lengde på filmen*/
      var length = movie_object["length"];
     document.getElementById("lengthM").innerHTML = "Lengde: " + length + ".min";
     
+    /*Henter ut beskrivelse av filmen*/
      var description = movie_object["description"];
-    document.getElementById("mDesc").innerHTML = description;
+    document.getElementById("mDesc").innerHTML = "Description: " + description;
     
+    /*Henter ut hvilken land filmen er fra*/
+    var country = movie_object["country"];
+    document.getElementById("country").innerHTML = "Country: " + country;
+    
+    /*Henter ut regissøren av filmen*/
+     var director = movie_object["dir"];
+    document.getElementById("director").innerHTML = "Director: " + director;
+    
+    /*Henter ut skuespillerne i filmen*/
+     var folk = movie_object["folk"];
+    document.getElementById("folk").innerHTML = "Stars: " + folk;
+    
+    /*Henter ut norsk tittel om det finnes, om ikke så gir den oss engelsk tittel, orginal tittel vises over uansett*/
     var etitle = movie_object["etitle"];
     var ntitle = movie_object["ntitle"];
     if (ntitle){
@@ -109,25 +123,6 @@ window.onload = function() {
             document.getElementById("youtube").innerHTML = "<iframe width=\"800\" height=\"400\" src=\"https://www.youtube.com/embed/" + movie_object["youtube trailer id"] +  "\" frameborder=\"0\" allowfullscreen></iframe>";
             
         }
-
-
-      function youtube(){
-  for(i in movies_object) {
-        
-        m = movies_object[i];
-
-        if(m["youtube trailer id"]){
-            console.log(m["youtube trailer id"]);
-            console.log(m);
-           
-       
-      }
-    }
-  }
-youtube();
- 
-
-    
 
 
 }
