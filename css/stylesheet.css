@@ -799,7 +799,9 @@ Her slutter fyll-elementer------------------------------------------------------
 
 #film_title {
  	list-style-type: none;
- 	background: maroon;
+ 	text-align: center;
+ 	text-decoration: serif;
+
  }      
         
 #filmInfo{
