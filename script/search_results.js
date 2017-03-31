@@ -7,14 +7,10 @@ function search_for_X() {
 function display_X() {
 }
 */
-<<<<<<< HEAD
-function search_for_x(search) {
-=======
+
 
 function search_for_x(search){
 
-
->>>>>>> origin/master
 	var keys = Object.keys(search);
 	console.log(keys);
 
