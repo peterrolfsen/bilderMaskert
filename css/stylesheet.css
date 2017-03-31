@@ -51,7 +51,7 @@ body, html {
 	align-items: center;
 }
 
-.showfyll { /*Pakker inn alt som skal vises før man blar nedover på siden*/
+.visInnhold { /*Pakker inn alt som skal vises før man blar nedover på siden*/
 
 	
 	background-size: cover;
@@ -878,6 +878,19 @@ Her slutter fyll-elementer------------------------------------------------------
 }
 
 @media screen and (max-width:1600px){/*Pro012*/
+ 
+    .fyll{
+        height: 100vh;
+        
+    }
+    .header{
+        margin-left: 10vw;
+        margin-right: 11vw;
+    }
+    .mainbar{
+        
+
+    }
     #filmList{/*Pro012*/
     position: absolute;
     margin-top: -7%;
@@ -886,17 +899,17 @@ Her slutter fyll-elementer------------------------------------------------------
 	width: 50%;
 
 }
-    
     #rutineText{
         font-size: 13px;
     }
     #rutineContent{
         height: auto;
     }
+    
 
 }
  /*'Tilpasser under-baren på index-siden til Ipad*/ 
-@media (max-width: 1200px) {
+@media (max-width: 1080px) {
 	    #filmList{/*Pro012*/
     position: absolute;
     margin-top: -10%;
@@ -905,6 +918,28 @@ Her slutter fyll-elementer------------------------------------------------------
 	width: 80%;
 
 }
+     #film_title {
+           margin-left: -10vw; 
+
+               }
+        #film_title a {
+           font-size: 4vh;
+       }
+        .fyll {
+           width: 195vw;
+           min-height: 240vh; 
+            height: auto;
+           
+       }
+       #aSok{
+           font-size: 6vh;
+       }
+   
+       .mainbar{
+           margin-left: -1vw;
+           margin-right: -20vw;
+           width: 30vw;
+       }
 }
 
 @media (max-width: 1000px) {
@@ -1035,8 +1070,35 @@ Her slutter fyll-elementer------------------------------------------------------
                margin-left: -2%;
 
 }
+        .visInnhold{
+            width: 100vw;
+            height: 200vh;
+        }
         
-    
+     #film_title {
+           margin-left: -5vw; 
+
+               }
+        #film_title a {
+           font-size: 4vh;
+       }
+        .fyll {
+           min-width: 220vw;
+           height: auto;   
+           min-height: 200vh;
+            
+       }
+       #aSok{
+           font-size: 6vh;
+       }
+       #upperHead{
+           margin-left: -10vw;
+           margin-right: 100vw;
+       }
+       .mainbar{
+           margin-left: -10vw;
+           margin-right: 150vw;
+       }
     /*'Tilpasser under-baren på index-siden til Smartelefon*/    
   #rutineText{/*Pro012*/
     font-size: 1.5vh;
@@ -1048,17 +1110,49 @@ Her slutter fyll-elementer------------------------------------------------------
 }
 /*'Tilpasser under-baren på index-siden til iphone 5 og galaxy s5*/
 
-   @media (max-width: 380px) {
-           #filmList{/*Pro012*/
-    position: absolute;
-    margin-top: -25%;
-	font-size: 10px;
-	font-weight: 300;
-	width: 90%;
-               margin-left: -2%;
+@media (max-width: 380px) {
+      .visInnhold{
+           width: 1000vh;
+            height: 100vh;
+
+       }
+   #filmList{/*Pro012*/
+       position: absolute;
+       margin-top: -25%;
+	   font-size: 10px;
+       font-weight: 300;
+	   width: 90%;
+       margin-left: -2%;
+               
 
 }
+     
+       #film_title {
+           margin-left: -45vw; 
 
+               }
+        #film_title a {
+           font-size: 4vh;
+       }
+        .fyll {
+           width: 260vw;
+           min-height: 260vh; 
+            height: auto;
+           
+       }
+       #aSok{
+           font-size: 6vh;
+       }
+       #upperHead{
+           margin-left: 10vw;
+           margin-right: 100vw;
+       }
+       .mainbar{
+           margin-left: 10vw;
+           margin-right: 100vw;
+       }
+}
+           
        /**Show movies**/
 
        
