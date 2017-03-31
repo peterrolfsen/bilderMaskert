@@ -20,59 +20,65 @@
   <meta charset="utf-8">
   </head>
   <body>
+	
 
-    <div class="header">
-        <div id="upperHead">
-          <div class="mainbar"><!--pro012-->
+
+			<div class="header">
+				<div id="upperHead">
+					<div class="mainbar"><!--pro012-->
                    
                         
-            <ul>
-              <li> <a href="index.html"> Hjemme </a></li>
-              <li> <a href="filmer.html"> Filmer </a></li>
-              <li> <a href="advanced_search.html"> Avansert søk </a></li>
+						<ul>
+							<li> <a href="index.html"> Hjemme </a></li>
+							<li> <a href="filmer.html"> Filmer </a></li>
+							<li> <a href="advanced_search.html"> Avansert søk </a></li>
 
-            </ul>
-          </div><!--.mainbar-->
+						</ul>
+					</div><!--.mainbar-->
 
-  <!-- Skjemaet gir mulighet for å søke etter film tittel. Dere må inkludere muligheten for et mer avansert søk -->
-  <form id="search" action="search_results.html" method="get">
-    <fieldset>
+	<!-- Skjemaet gir mulighet for å søke etter film tittel. Dere må inkludere muligheten for et mer avansert søk -->
+	
+			<form id="search" action="search_results.html" method="get">
+		<fieldset>
+
+
+
+		
+			<div>
+				
+				<input id="film_title" name="film_title" type="text" placeholder="Search" >
+				
+			</div>
+		</fieldset>
+		
+	</form>
+	
+
+					<div class="menyKnapp"><!--pro012-->
+						<ul>
+							<li class="meny" id="kaphe"> <a href="#"> Kaphekoff </a> 
+								<div class="dropned">
+									<a href="#"> Mine lån </a>
+									<a href="#"> Min ønskeliste </a>
+									<a href="#" title="Trykk her for å logge inn/ut" id="loggUtInn" onclick="loggUtInn();return false">Logg ut</a><!--skj006-->
+								</div>
+							</li>
+						</ul>
+					</div><!--.menyKnapp-->
+					<div class="mobilMeny"><!--skj006-->
+						<a href="#" id="menyIkon" onclick="sprettMeny();return false"><img src="pics/taxes-menu-icon.png" alt="menu button"></a>
+					</div><!--.mobilMeny-->
+				</div><!--#upperHead--><!--skj006-->
+				<div id="mobildrop">
+					<ul><!--skj006-->
+						<li> <a href="index.html"> Hjemme </a></li>
+						<li> <a href="filmer.html"> Filmer </a></li>
+						<li> <a href="advanced_search.html"> Avansert søk </a></li>
+					</ul>
+				</div>
+			</div><!--.header-->
+           
     
-      <div>
-        
-        <input id="film_title" name="film_title" type="text" placeholder="Search" >
-      </div>
-    </fieldset>
- </form>
-  
-
-  
-  
-  </form>
-
-          <div class="menyKnapp"><!--pro012-->
-            <ul>
-              <li class="meny" id="kaphe"> <a href="#"> Kaphekoff </a> 
-                <div class="dropned">
-                  <a href="#"> Mine lån </a>
-                  <a href="#"> Min ønskeliste </a>
-                  <a href="#" title="Trykk her for å logge inn/ut" id="loggUtInn" onclick="loggUtInn();return false">Logg ut</a><!--skj006-->
-                </div>
-              </li>
-            </ul>
-          </div><!--.menyKnapp-->
-          <div class="mobilMeny"><!--skj006-->
-            <a href="#" id="menyIkon" onclick="sprettMeny();return false"><img src="pics/taxes-menu-icon.png" alt="menu button"></a>
-          </div><!--.mobilMeny-->
-        </div><!--#upperHead--><!--skj006-->
-        <div id="mobildrop">
-          <ul><!--skj006-->
-            <li> <a href="index.html"> Hjemme </a></li>
-            <li> <a href="filmer.html"> Filmer </a></li>
-            <li> <a href="advanced_search.html"> Avansert søk </a></li>
-          </ul>
-        </div>
-      </div><!--.header-->
   <div id="movieCover">
   </div>
    
@@ -106,7 +112,7 @@
          <div id="country"> </div>
         </div>
     <table id="movie_stat_table" border=1>
-
+<input type="submit" class="btn" value="Lei film">
       <tr>
 		<td align="center"><b>Key</b></td><td align="center"><b>Value</b></td>
       </tr>
@@ -124,6 +130,6 @@
       </tr>
     </table>
 </div>
-   
+
   </body>
 </html>
