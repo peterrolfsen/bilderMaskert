@@ -36,6 +36,7 @@ window.onload = function() {
         return;
     }
     
+  
     // get the movie_object from the "database" movies_object
     movie_object = movies_object[query_params.id];
     if (!movie_object) {
@@ -60,7 +61,7 @@ window.onload = function() {
 
     /*Henter ut lengde på filmen*/
      var length = movie_object["length"];
-    document.getElementById("lengthM").innerHTML = "<STRONG>Lengde: </STRONG>" + length + ".min";
+    document.getElementById("lengthM").innerHTML = "<STRONG>Length: </STRONG>" + length + ".min";
     
     /*Henter ut beskrivelse av filmen*/
      var description = movie_object["description"];
@@ -84,8 +85,10 @@ window.onload = function() {
     if (ntitle){
     document.getElementById("nTitle").innerHTML = "(" + ntitle + ")";
     }else if(etitle){
-    document.getElementById("eTitle").innerHTML = "(" + etitle + ")";  
+    document.getElementById("eTitle").innerHTML = "(" + etitle + ")"; 
+        
     }
+    
     
     // add a "debug-table" on the bottom showing all elements from movie_object
     stats_table = document.getElementById("movie_stat_table");
@@ -106,17 +109,30 @@ window.onload = function() {
     // review object debug-table
     review_table = document.getElementById("review_stat_table");
     for (key in review_object) {
+        
 	left = document.createTextNode(key);
 	right = document.createTextNode(review_object[key]);
 	add_row(review_table, left, right);
 	for (subkey in review_object[key]) {
-	    left = document.createTextNode(" -> " + subkey);
+	  
 	    right = document.createTextNode(review_object[key][subkey]);
 	    add_row(review_table, left, right);
+        
 	}
        
-    }
-
+    }  
+    /*Henter ut rating fra review objektets objekt*/
+      var rating = review_object[key]["rating"];
+    document.getElementById("rating").innerHTML = "<STRONG>Rating: </STRONG>" + rating;
+    /*Henter ut brukernavn fra review objektets objekt*/
+     var username = review_object[key]["username"];
+    document.getElementById("username").innerHTML = "<STRONG>Username: </STRONG>" + username;
+    /*Henter ut dato modifisert fra review objektets objekt*/
+     var moddate = review_object[key]["mod_date"];
+    document.getElementById("moddate").innerHTML = "<STRONG>Date: </STRONG>" + moddate;
+    /*Henter ut kommentar fra review objektets objekt*/
+     var comment = review_object[key]["comment"];
+    document.getElementById("comment").innerHTML = "<STRONG>Comment: </STRONG>" + comment;
 
  /*Om filmen har en youtube trailer id, settes den inn i youtube div'en*/
      if(movie_object["youtube trailer id"]){
