@@ -8,15 +8,60 @@
 	<title> MaskedPictures </title>
 	<link rel="icon" href="pics/teat.png"><!--pro012-->
 	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+      <style type="text/css">
+		.fyll { /*Bakgrunnsbilde varierer fra side til side, og legges derfor inn direkte i html-doc*/
+			background-image: url("pics/300.jpg");
+		}/*skj006*/
+	</style>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, intial-scale=1">
+	<meta name="viewport" content="width=dvice-width, intial-scale=1">
   </head>
   <body>
+<div class="container">
+		<div class="fyll">
+			<div class="header">
+				<div id="upperHead">
+					<div class="mainbar"><!--pro012-->
+                   
+                        
+						<ul>
+							<li> <a href="index.html"> Hjemme </a></li>
+							<li> <a href="filmer.html"> Filmer </a></li>
+							<li> <a href="advanced_search.html"> Avansert søk </a></li>
 
+						</ul>
+					</div><!--.mainbar-->
+
+	<!-- Skjemaet gir mulighet for å søke etter film tittel. Dere må inkludere muligheten for et mer avansert søk -->
+	
+
+					<div class="menyKnapp"><!--pro012-->
+						<ul>
+							<li class="meny" id="kaphe2"> <a href="#"> Kaphekoff </a> 
+								<div class="dropned">
+									<a href="#"> Mine lån </a>
+									<a href="#"> Min ønskeliste </a>
+									<a href="#" title="Trykk her for å logge inn/ut" id="loggUtInn" onclick="loggUtInn();return false">Logg ut</a><!--skj006-->
+								</div>
+							</li>
+						</ul>
+					</div><!--.menyKnapp-->
+					<div class="mobilMeny"><!--skj006-->
+						<a href="#" id="menyIkon" onclick="sprettMeny();return false"><img src="pics/taxes-menu-icon.png" alt="menu button"></a>
+					</div><!--.mobilMeny-->
+				</div><!--#upperHead--><!--skj006-->
+				<div id="mobildrop">
+					<ul><!--skj006-->
+						<li> <a href="index.html"> Hjemme </a></li>
+						<li> <a href="filmer.html"> Filmer </a></li>
+						<li> <a href="advanced_search.html"> Avansert søk </a></li>
+					</ul>
+				</div>
+			</div><!--.header-->
   	
 
-            
-
+           
+ <h2 id="aSok"> <a href="advanced_search.html"> Avansert søk </a></h2>
 	<div id="film_title"></div>
 	<div id="actor"></div>
 	<div id="director"></div>
@@ -24,6 +69,8 @@
 	<div id="country"></div>
 	<!-- Returnere resultatene som en (ordered <ol>) liste -->
 	<ol id="res_list"></ol>
-      
+    
+    </div>
+      </div>
   </body>
 </html>

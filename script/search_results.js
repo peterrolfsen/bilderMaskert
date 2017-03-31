@@ -7,11 +7,11 @@ function search_for_X() {
 function display_X() {
 }
 */
-function search_for_x(search){
+function search_for_x(search) {
 	var keys = Object.keys(search);
 	console.log(keys);
 
-	for(i in movies_object) {
+	for (i in movies_object) {
 		
 		m = movies_object[i];
 
@@ -19,11 +19,27 @@ function search_for_x(search){
 			m.dir.toLowerCase().includes(search.dir.toLowerCase()) &&
 			m.country.toLowerCase().includes(search.country.toLowerCase())
 			) {
-			console.log(m.otitle);
+		
 			film_title.innerHTML+= "<li><a href= \"show_movie.html?id=" + i + "\">" + m.otitle + "</a> </li> <br>";
 		}
 	}
 }
+
+function searchGenre()
+{
+    genreResult = [];
+    for(let g in genres_object)
+    {
+        film = genres_object[g];
+ 
+        if(film.includes(searchGenre))
+        {
+            genreResult.push(movies_object[g]);;
+        }
+    }
+}
+ 
+
 
 window.onload = function() {
 	query_params = get_query_string_parameters();
@@ -59,7 +75,10 @@ window.onload = function() {
 	if (query_params.genre) {
         genre = document.getElementById("genre");
 		genre.innerHTML = query_params.genre;
+        searchGenre(query_params.genre.toLowerCase());
     }
+   
+    
 	
 	if (query_params.country) {
         country = document.getElementById("country");
