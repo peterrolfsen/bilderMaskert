@@ -881,7 +881,7 @@ Her slutter fyll-elementer------------------------------------------------------
  
     .fyll{
         height: 100vh;
-        
+        width: auto;
     }
     .header{
         margin-left: 10vw;
@@ -893,11 +893,11 @@ Her slutter fyll-elementer------------------------------------------------------
     }
     #filmList{/*Pro012*/
     position: absolute;
-    margin-top: -7%;
+    margin-top: -30vh;
 	font-size: 19px;
 	font-weight: 300;
-	width: 50%;
-
+	width: 50vw;
+    bottom: 5;    
 }
     #rutineText{
         font-size: 13px;
@@ -905,7 +905,9 @@ Her slutter fyll-elementer------------------------------------------------------
     #rutineContent{
         height: auto;
     }
-    
+    #allContent{
+        bottom: 5;
+    } 
 
 }
  /*'Tilpasser under-baren på index-siden til Ipad*/ 
@@ -925,12 +927,10 @@ Her slutter fyll-elementer------------------------------------------------------
         #film_title a {
            font-size: 4vh;
        }
-        .fyll {
-           width: 195vw;
-           min-height: 240vh; 
-            height: auto;
+        
+            
            
-       }
+       
        #aSok{
            font-size: 6vh;
        }
@@ -956,7 +956,7 @@ Her slutter fyll-elementer------------------------------------------------------
 		-webkit-box-ordinal-group: 3;
 		    -ms-flex-order: 2;
 		        order: 2;
-	}l
+	}
 
 	.movieText {
 		min-width: 80%
@@ -1082,12 +1082,7 @@ Her slutter fyll-elementer------------------------------------------------------
         #film_title a {
            font-size: 4vh;
        }
-        .fyll {
-           min-width: 220vw;
-           height: auto;   
-           min-height: 200vh;
-            
-       }
+        
        #aSok{
            font-size: 6vh;
        }
@@ -1134,12 +1129,7 @@ Her slutter fyll-elementer------------------------------------------------------
         #film_title a {
            font-size: 4vh;
        }
-        .fyll {
-           width: 260vw;
-           min-height: 260vh; 
-            height: auto;
-           
-       }
+        
        #aSok{
            font-size: 6vh;
        }
